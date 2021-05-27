@@ -1,4 +1,4 @@
-function esItaliano(nom) {
+function esItalia(nom) {
   if (nom.charAt(nom.length - 1) === "i") {
     return true;
   } else {
@@ -6,15 +6,15 @@ function esItaliano(nom) {
   }
 }
 
-function pregunta(nom) {
-  if (esItaliano(nom)) {
-    return nom + ": Este apellido tiene muchas probabilidades de ser italiano";
+function formatImpressio(nom) {
+  if (esItalia(nom)) {
+    return `${nom}: Este apellido tiene muchas probabilidades de ser italiano`;
   } else {
-    return nom + ": Este apellido podría ser de cualquier país";
+    return `${nom}: Este apellido podría ser de cualquier país`;
   }
 }
 
 const nomItalia = "Cascati";
 const nomNoItalia = "Aleu";
-console.log(pregunta(nomItalia));
-console.log(pregunta(nomNoItalia));
+console.log(formatImpressio(nomItalia));
+console.log(formatImpressio(nomNoItalia));
